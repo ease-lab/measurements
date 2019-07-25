@@ -1,0 +1,3 @@
+[submodule "time_rdtsc"]
+	path = time_rdtsc
+	url = git@github.com:inf-comparchs/time_rdtsc.git
