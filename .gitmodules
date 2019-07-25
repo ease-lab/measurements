@@ -4,3 +4,6 @@
 [submodule "lancet-tool"]
 	path = lancet-tool
 	url = git@github.com:inf-comparchs/lancet-tool.git
+[submodule "distbenchr"]
+	path = distbenchr
+	url = git@github.com:inf-comparchs/distbenchr.git
