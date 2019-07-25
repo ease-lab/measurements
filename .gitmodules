@@ -7,3 +7,9 @@
 [submodule "distbenchr"]
 	path = distbenchr
 	url = git@github.com:inf-comparchs/distbenchr.git
+[submodule "FlameGraph"]
+	path = FlameGraph
+	url = git@github.com:brendangregg/FlameGraph.git
+[submodule "bcc"]
+	path = bcc
+	url = git@github.com:iovisor/bcc.git
