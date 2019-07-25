@@ -2,11 +2,13 @@ The following scripts are used to (de)stabilize the environment for the measurem
 
 ### Prerequisites
 
-* Set BIOS option “CPU Power Management” to “OS DBPM” to allow `acpi-cpufreq driver to load instead of Intel P-state driver. Need to add kernel boot argument `intel_pstate=disable"
+* Set BIOS option “CPU Power Management” to “OS DBPM” to allow `acpi-cpufreq` driver to load instead of Intel P-state driver. Need to add kernel boot argument `intel_pstate=disable`
 
 * Add kernel boot arguments.
 ```
-usbcore.autosuspend=-1 intel_pstate=disable intel_iommu=on iommu=pt nokaslr rhgb quiet tsc=reliable cpuidle.off=1 idle=poll intel_idle.max_cstate=0 intel_idle.max_cstate=0 processor.max_cstate=0 pcie_aspm=off pcie_aspm=off processor.ignore_ppc=1
+usbcore.autosuspend=-1 intel_pstate=disable intel_iommu=on iommu=pt nokaslr rhgb quiet tsc=reliable
+cpuidle.off=1 idle=poll intel_idle.max_cstate=0 intel_idle.max_cstate=0 processor.max_cstate=0
+pcie_aspm=off pcie_aspm=off processor.ignore_ppc=1
 
 ```
 
@@ -18,3 +20,5 @@ Reference: [link](https://github.com/torvalds/linux/blob/master/Documentation/ad
 * `*cstate*` doesn't let cpus go to sleep.
 
 * `pcie_aspm-off` disables PCIe power management.
+
+* `kaslr` disables the page table maping fix for side-channel attacks.
